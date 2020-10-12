@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">measurementConverter</string>
+    <string name="milesR">Miles</string>
+    <string name="kiloR">Kilometers</string>
+    <string name="inchR">Inches</string>
+    <string name="centR">Centimeters</string>
 </resources>

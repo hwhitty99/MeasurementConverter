@@ -38,24 +38,29 @@
                     android:id="@+id/radioButton1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:onClick="convert"
                     android:text="Miles to Kilometers" />
 
                 <RadioButton
                     android:id="@+id/radioButton2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:onClick="convert"
                     android:text="Kilometers to Miles" />
 
                 <RadioButton
                     android:id="@+id/radioButton3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:onClick="convert"
                     android:text="Inches to Centimeters" />
 
                 <RadioButton
                     android:id="@+id/radioButton4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:onClick="convert"
                     android:text="Centimeters to Inches" />
             </RadioGroup>
         </TableRow>
@@ -79,7 +84,8 @@
                 android:ems="10"
                 android:hint="Type number"
                 android:inputType="numberDecimal"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:importantForAutofill="no" />
         </TableRow>
 
         <TableRow
