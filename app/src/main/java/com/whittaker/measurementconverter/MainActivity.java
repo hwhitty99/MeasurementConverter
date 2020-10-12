@@ -1,5 +1,6 @@
 package com.whittaker.measurementconverter;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
@@ -34,11 +35,15 @@ public class MainActivity extends AppCompatActivity
         unit1EditText.setOnEditorActionListener(this);
     }
 
+    //converts given value and displays the converted number
+    //based on the selected radio button
     public void convert(View v) {
 
         int radioId = radioGroup.getCheckedRadioButtonId();
         double conversionRatio;
 
+        //sets the two unit labels and conversion ratio based
+        //on the selected radio button
         switch (radioId) {
             case R.id.radioButton1:
                 unit1Label.setText(R.string.milesR);
@@ -76,9 +81,11 @@ public class MainActivity extends AppCompatActivity
             unit1Double = Double.parseDouble(unit1String);
         }
 
+        //converts number in unit 1 units to unit 2 units
         unit2Double = unit1Double * conversionRatio;
         String unit2String = Double.toString(unit2Double);
 
+        //displays converted number
         unit2TextView.setText(unit2String);
 
     }
@@ -90,5 +97,12 @@ public class MainActivity extends AppCompatActivity
             convert(v);
         }
         return false;
+    }
+
+    //displays converted nuber when device is rotated
+    @Override
+    public void onResume() {
+        super.onResume();
+        convert(unit1EditText);
     }
 }
