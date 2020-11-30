@@ -1,4 +1,4 @@
-# measurementConverter
+# MeasurementConverter
 When the user selects a conversion from the Radio Buttons, the app displays the appropriate conversion units in the TextView widgets below, calculates the units, and displays the results.
 
 # What I Learned
